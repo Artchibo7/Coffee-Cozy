@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    background-image: url('/assets/logo.png');
+    background-size: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.header{
+    width: 95%;
+    height: 100px;
+    margin: 20px;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accueil, .apropos, .menu{
+    width: 63px;
+    height: 17px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    gap: 30px;
+}
+
+.reservation{
+    width: 104px;
+    height: 41px;
+    background-color: black;
+    color: aliceblue;
+    font-size: 16px;
+}
