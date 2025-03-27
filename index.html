@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../assets/styles.css" />
     <title>Document</title>
 </head>
+
 <body>
     <header class="header">
-        <div>
-            <div class="logo"></div>
-          </div>
-          <div>
-            <a class="accueil" href="">Accueil</a>
-            <a class="apropos" href="">À propos</a>
-            <a class="menu" href="">Menu</a>
-            <button class="reservation">Réserver</button>
-          </div>
+
+        <div class="header__logo"></div>
+        <nav class="header__nav">
+            <a class="header__nav--accueil" href="#accueil">Accueil</a>
+            <a class="header__nav--apropos" href="#apropos">À propos</a>
+            <a class="header__nav--menu" href="#menu">Menu</a>
+            <button class="header__nav--reservation">Réserver</button>
+        </nav>
     </header>
     <main>
         <section class="main">
-            <article class="main__menubuttons main__content">
-                <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi obcaecati expedita saepe doloribus quis repudiandae quisquam animi cumque natus sit harum necessitatibus veritatis tempora, repellat qui ipsam, explicabo perferendis? Expedita.</div>
+            <article class="main__accueil main__content" id="accueil">
+                <div class="main__accueil--text main__text">
+                    <h1>Savourez chaque gorgée, vivez l'instant.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi obcaecati expedita saepe
+                        doloribus quis repudiandae quisquam animi cumque natus sit harum necessitatibus veritatis
+                        tempora, repellat qui ipsam, explicabo perferendis? Expedita.</p>
+                    <button class="main__accueil--voirMenu">Voir le menu</button>
+                    <button class="main__accueil--contact">Contact</button>
+                </div>
                 <img src="assets/Photo Lieu Large.jpg" alt="photo générale du lieu">
             </article>
-            <article class="main__histoire main__content">
-                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium illum nisi, veritatis deserunt vel magnam quam at eaque rem voluptatum corporis ullam voluptas accusantium fugiat recusandae, laboriosam excepturi obcaecati soluta.</div>
+            <article class="main__apropos main__content" id="apropos">
+                <div class="main__apropos--text main__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium illum nisi, veritatis
+                    deserunt vel magnam quam at eaque rem voluptatum corporis ullam voluptas accusantium fugiat
+                    recusandae, laboriosam excepturi obcaecati soluta.</div>
                 <img src="assets/Photo Ambiance.jpg" alt="photo d'un espace du lieu">
             </article>
-            <article class="main__menuBoissons main__content">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, id. Tempore delectus dolorem sequi eaque quam ex, saepe in culpa, dicta exercitationem, porro labore modi fugiat explicabo numquam praesentium corporis.</div>
+            <article class="main__menu main__content" id="menu">
+                <div class="main__menu--text main__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, id. Tempore delectus dolorem sequi
+                    eaque quam ex, saepe in culpa, dicta exercitationem, porro labore modi fugiat explicabo numquam
+                    praesentium corporis.</div>
                 <img src="assets/Photo Produit.jpg" alt="photo d'une tasse de café">
             </article>
-            <div class="main__contactAndMap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima ut cum, animi eos doloribus sequi, quaerat eaque nemo omnis reiciendis laborum ipsam similique, quibusdam voluptatem voluptas consequuntur cupiditate veniam.</div>
+            <div class="main__contact">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minima ut cum,
+                animi eos doloribus sequi, quaerat eaque nemo omnis reiciendis laborum ipsam similique, quibusdam
+                voluptatem voluptas consequuntur cupiditate veniam.</div>
         </section>
-    <footer class="footer"></footer>
+        <footer class="footer"></footer>
 </body>
+
 </html>
