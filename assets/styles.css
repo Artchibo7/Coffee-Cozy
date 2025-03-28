@@ -21,7 +21,7 @@ body {
 .header__logo {
     width: 70px;
     height: 70px;
-    background-image: url('/assets/logo.png');
+    background-image: url('../assets/logo.png');
     background-size: cover;
 }
 
