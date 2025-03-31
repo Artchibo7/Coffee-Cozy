@@ -133,12 +133,25 @@ body {
         }
     }
 
-    img {
+    .main__content--photoPaysage {
         /* flex: 1; */
         width: 100%;
         max-height: 90vh;
         object-fit: cover;
     }
+
+    .main__content--photoPortrait {
+        /* flex: 1; */
+        height: 82vh;
+        max-width: 36vw;
+        object-fit: cover;
+    }
+
+    
+    .main__apropos--text .man__menu--text {
+        padding-right: 9.3vw;
+    }
+
 }
 
 .main__accueil {
