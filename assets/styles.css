@@ -212,7 +212,7 @@ h5 {
 .x,
 .linkedin,
 .ytb {
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .newsletter form {
@@ -231,7 +231,7 @@ h5 {
     padding: 8px 15px;
     background: white;
     color: black;
-    border: 1px solide black;
+    border: 1px solid black;
     cursor: pointer;
 }
 
@@ -246,4 +246,51 @@ h5 {
     margin-left: 15px;
     text-decoration: none;
     color: #333;
+}
+
+
+/* Animation sur le menu */
+
+/* Cacher la checkbox */
+.menu-toggle {
+    display: none;
+}
+
+.header__nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Masquer le menu en mode mobile */
+@media (max-width: 768px) {
+    .header__nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgb(212, 214, 215);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Afficher le menu quand la checkbox est cochée */
+    .menu-toggle:checked + .menu-icon + .header__nav {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        background: white;
+    }
+}
+
+/* Affichage normal sur desktop */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
 }
