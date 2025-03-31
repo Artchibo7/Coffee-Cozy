@@ -114,49 +114,38 @@ body {
 
 .main article {
     padding: 10vh 0;
-    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 0;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    section {
-        display: flex;
-        flex-direction: column;
-
-        div {
-            display: flex;
-        }
-    }
+    gap: 8vw;
 
     .main__content--photoPaysage {
-        /* flex: 1; */
         width: 100%;
         max-height: 90vh;
         object-fit: cover;
     }
 
     .main__content--photoPortrait {
-        /* flex: 1; */
         height: 82vh;
-        max-width: 36vw;
+        max-width: 40vw;
         object-fit: cover;
     }
-
     
-    .main__apropos--text .man__menu--text {
-        padding-right: 9.3vw;
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50vw;
+        gap: 0.6vw;
     }
-
+    div {
+        display: flex;
+    }
 }
 
 .main__accueil {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    
 }
 
 .main__accueil--contact {
