@@ -74,11 +74,40 @@ ul {
 }
 
 .header__nav {
-    display: flex;
+    display: none;
     min-width: 33vw;
     justify-content: space-evenly;
     align-items: baseline;
     flex-wrap: nowrap;
+}
+
+.header__nav--burger {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgb(212, 214, 215);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+/* Cacher la checkbox */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked+.menu-icon+.header__nav--burger {
+    display: flex;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background: white;
 }
 
 .header__nav--accueil,
@@ -107,8 +136,6 @@ ul {
     flex-direction: column;
 }
 
-
-
 .main__content {
     padding-block: 5vh;
     display: flex;
@@ -134,7 +161,6 @@ ul {
         gap: 3vh;
     }
 }
-
 
 .main__accueil {
     text-align: center;
@@ -168,6 +194,7 @@ ul {
     display: grid;
     width: 100%;
     gap: 3vh;
+
     ul {
         display: flex;
         flex-direction: column;
@@ -178,55 +205,13 @@ ul {
             text-indent: 1.5rem;
         }
     }
+
     margin-bottom: 7vh;
 }
 
 .main__contact iframe {
     width: 100%;
     height: 100%;
-}
-
-@media (min-width: 768px) {
-
-    .main__content {
-        flex-direction: row;
-
-        div {
-            display: flex;
-        }
-    }
-
-    .main__accueil {
-        flex-direction: column;
-
-        section {
-            max-width: 50vw;
-        }
-    }
-
-    .main__content--photoPortrait {
-        max-width: 40vw;
-        height: 45vw;
-    }
-
-    .main__contact {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .main__contact--text {
-        grid-template-columns: 1fr 38vw;
-    }
-
-    .main__contact iframe {
-        height: 82vh;
-        width: 100%;
-    }
-
-    .newsletter {
-        padding-right: 20vw;
-    }
-
 }
 
 footer {
@@ -304,94 +289,99 @@ footer {
 }
 
 
-/* Animation sur le menu */
 
-/* Cacher la checkbox */
-.menu-toggle {
-    display: none;
-}
-
-.header__nav {
-    display: flex;
-    gap: 20px;
-}
-
-/* Masquer le menu en mode mobile */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .header__nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: rgb(212, 214, 215);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    /* Afficher le menu quand la checkbox est cochée */
-    .menu-toggle:checked+.menu-icon+.header__nav {
         display: flex;
     }
 
     .menu-icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 10px;
-        background: white;
-    }
-}
-
-/* Affichage normal sur desktop */
-@media (min-width: 769px) {
-    .menu-icon {
         display: none;
     }
+
+    .main__content {
+        flex-direction: row;
+
+        div {
+            display: flex;
+        }
+    }
+
+    .main__accueil {
+        flex-direction: column;
+
+        section {
+            max-width: 50vw;
+        }
+    }
+
+    .main__content--photoPortrait {
+        max-width: 40vw;
+        height: 45vw;
+    }
+
+    .main__contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__contact--text {
+        grid-template-columns: 1fr 38vw;
+    }
+
+    .main__contact iframe {
+        height: 82vh;
+        width: 100%;
+    }
+
+    .newsletter {
+        padding-right: 20vw;
+    }
+
 }
-
-
 /* <== footer responsive ==> */
 
 @media (max-width: 768px) {
 
-    .footer-top{
+    .footer-top {
         display: flex;
         flex-direction: column;
         margin-top: 3vh;
         background: white;
         gap: 6vh;
     }
-    ul{
+
+    ul {
         gap: 2vh;
     }
 
-    .footer-form{
+    .footer-form {
         display: flex;
         flex-direction: column;
     }
 
-    .infos{
+    .infos {
         display: flex;
         flex-direction: column;
         gap: 5vh;
     }
-    .infos div{
+
+    .infos div {
         gap: 2vh;
     }
 
-    .footer-bottom{
+    .footer-bottom {
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 6vh;
     }
 
-    .copyright{
+    .copyright {
         order: 2;
-    }    
+    }
 
-    .legal{
+    .legal {
         display: flex;
         flex-direction: column;
         padding-top: 2vh;
@@ -399,5 +389,5 @@ footer {
         gap: 2vh;
 
     }
-    
+
 }
