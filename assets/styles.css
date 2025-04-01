@@ -57,7 +57,6 @@ ul {
 }
 
 
-
 .header {
     padding-top: 1vh;
     height: 100px;
@@ -191,34 +190,35 @@ ul {
 
 footer {
     display: grid;
-    grid-template-rows: 0.45fr 0.13fr;
+    padding-block: 3vw;
+    gap: 3vw;
+    grid-template-rows: 3fr 1fr;
     background: white;
-    padding: 80px 0 50px 0;
-    gap: 0.14fr;
 }
 
 .footer-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20vh;
     align-items: start;
     padding-bottom: 20px;
     ul {
+        display: grid;
+        align-items: center;
         list-style: none;
         padding: 0;
     }
     a {
         text-decoration: none;
         color: #333;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 }
 
-.infos {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 3vw;
+.newsletter {
+    padding-right: 20vw;
 }
-
 .newsletter form {
     display: flex;
     gap: 10px;
@@ -237,6 +237,17 @@ footer {
     color: black;
     border: 1px solid black;
     cursor: pointer;
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5vw;
+    padding-right: 5vw;
+
+    div {
+        display: grid;
+    }
 }
 
 .footer-bottom {
