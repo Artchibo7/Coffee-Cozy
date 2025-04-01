@@ -107,17 +107,13 @@ ul {
     flex-direction: column;
 }
 
-@media screen and (max-width: 768px) {
-    .main article {
-        flex-direction: column;
-    }
-}
 
-@media screen and (max-width: 768px) {}
 
-.main article {
-    padding: 10vh 0;
+.main__content {
+    padding-block: 5vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 8vw;
 
     .main__content--photoPaysage {
@@ -127,28 +123,23 @@ ul {
     }
 
     .main__content--photoPortrait {
-        height: 82vh;
-        max-width: 40vw;
+        width: 100%;
         object-fit: cover;
     }
-    
+
     section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 50vw;
         gap: 3vh;
-    }
-    div {
-        display: flex;
     }
 }
 
+
 .main__accueil {
-    flex-direction: column;
     text-align: center;
     align-items: center;
-    
+
 }
 
 .main__accueil--contact {
@@ -167,25 +158,66 @@ ul {
     font-size: 16px;
 }
 
+.main__contact {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding-block: 5vh;
+}
+
 .main__contact--text {
     display: grid;
-    grid-template-columns: 1fr 38vw;
     width: 100%;
-    ul{
+    gap: 3vh;
+    ul {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 3vh;
+
         p {
             text-indent: 1.5rem;
         }
     }
-    margin-bottom: 10vh;
+    margin-bottom: 7vh;
 }
 
 .main__contact iframe {
     width: 100%;
-    height: 85vh;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+
+    .main__content {
+        flex-direction: row;
+
+        div {
+            display: flex;
+        }
+    }
+
+    .main__accueil {
+        flex-direction: column;
+
+        section {
+            max-width: 50vw;
+        }
+    }
+
+    .main__content--photoPortrait {
+        max-width: 40vw;
+        height: 45vw;
+    }
+
+    .main__contact--text {
+        grid-template-columns: 1fr 38vw;
+        gap: 0;
+    }
+
+    .main__contact iframe {
+        width: 100%;
+    }
+
 }
 
 footer {
@@ -201,12 +233,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     align-items: start;
     padding-bottom: 20px;
+
     ul {
         display: grid;
         align-items: center;
         list-style: none;
         padding: 0;
     }
+
     a {
         text-decoration: none;
         color: #333;
@@ -219,6 +253,7 @@ footer {
 .newsletter {
     padding-right: 20vw;
 }
+
 .newsletter form {
     display: flex;
     gap: 10px;
@@ -241,7 +276,7 @@ footer {
 
 .infos {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5vw;
     padding-right: 5vw;
 
@@ -291,7 +326,7 @@ footer {
     }
 
     /* Afficher le menu quand la checkbox est cochée */
-    .menu-toggle:checked + .menu-icon + .header__nav {
+    .menu-toggle:checked+.menu-icon+.header__nav {
         display: flex;
     }
 
