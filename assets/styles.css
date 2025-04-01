@@ -52,6 +52,10 @@ body {
     }
 }
 
+ul {
+    list-style: none;
+}
+
 
 
 .header {
@@ -134,7 +138,7 @@ body {
         flex-direction: column;
         justify-content: center;
         max-width: 50vw;
-        gap: 0.6vw;
+        gap: 3vh;
     }
     div {
         display: flex;
@@ -164,57 +168,55 @@ body {
     font-size: 16px;
 }
 
-.main__contact--icon {
-    #Mail {
-        content: url ();
+.main__contact--text {
+    display: grid;
+    grid-template-columns: 1fr 38vw;
+    width: 100%;
+    ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 3vh;
+        p {
+            text-indent: 1.5rem;
+        }
     }
+    margin-bottom: 10vh;
+}
+
+.main__contact iframe {
+    width: 100%;
+    height: 85vh;
 }
 
 footer {
+    display: grid;
+    grid-template-rows: 0.45fr 0.13fr;
     background: white;
     padding: 80px 0 50px 0;
+    gap: 0.14fr;
 }
 
-.footer-container {
+.footer-top {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20vh;
     align-items: start;
     padding-bottom: 20px;
-    border-bottom: 1px solid black;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+    }
 }
 
-.footer-container h3,
-h5 {
-    margin-bottom: 20px;
-}
-
-.footer-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-container ul li {
-    margin-bottom: 5px;
-}
-
-.footer-container ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.accueil,
-.apropos,
-.menu,
-.email,
-.tel,
-.adresse,
-.fb,
-.insta,
-.x,
-.linkedin,
-.ytb {
-    font-size: 10px;
+.infos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3vw;
 }
 
 .newsletter form {
@@ -242,6 +244,7 @@ h5 {
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
+    border-top: 1px solid black;
 }
 
 .legal a {
