@@ -209,12 +209,17 @@ ul {
         height: 45vw;
     }
 
+    .main__contact {
+        display: flex;
+        flex-direction: column;
+    }
+
     .main__contact--text {
         grid-template-columns: 1fr 38vw;
-        gap: 0;
     }
 
     .main__contact iframe {
+        height: 82vh;
         width: 100%;
     }
 
