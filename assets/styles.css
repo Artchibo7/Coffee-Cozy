@@ -53,6 +53,10 @@ body {
     }
 }
 
+.mailto{
+    color: black;
+}
+
 ul {
     list-style: none;
 }
@@ -124,12 +128,23 @@ ul {
     gap: 30px;
 }
 
+.header__nav--accueil:hover,
+.header__nav--apropos:hover,
+.header__nav--menu:hover {
+    transform: scale(1.2);
+
+}
+
 .header__nav--reservation {
     width: 104px;
     height: 41px;
     background-color: black;
     color: aliceblue;
     font-size: 16px;
+}
+.header__nav--reservation:hover {
+    background-color: gray;
+    transform: scale(1);
 }
 
 /* Mise en page du Main */
@@ -191,6 +206,13 @@ ul {
     padding-block: 5vh;
 }
 
+.main__accueil--voirMenu:hover,
+.main__accueil--contact:hover {
+    background-color: gray;
+    transform: scale(1);
+}
+
+
 .main__contact--text {
     display: grid;
     width: 100%;
@@ -244,6 +266,10 @@ footer {
     }
 }
 
+a:hover{
+    transform: scale(1.2);
+}
+
 .footer__top--newsletter form {
     display: flex;
     gap: 10px;
@@ -262,6 +288,10 @@ footer {
     color: black;
     border: 1px solid black;
     cursor: pointer;
+}
+.footer__top--newsletter button:hover{
+    background: gray;
+    transform: scale(1);
 }
 
 .footer__top--infos {
