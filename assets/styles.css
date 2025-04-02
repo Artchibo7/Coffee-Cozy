@@ -1,3 +1,4 @@
+/* Regles générales de style */
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +57,7 @@ ul {
     list-style: none;
 }
 
-
+/* Header */
 .header {
     padding-top: 1vh;
     height: 100px;
@@ -72,7 +73,7 @@ ul {
     background-image: url("../assets/logo.png");
     background-size: cover;
 }
-
+/* nav desktop */
 .header__nav {
     display: none;
     min-width: 33vw;
@@ -80,7 +81,7 @@ ul {
     align-items: baseline;
     flex-wrap: nowrap;
 }
-
+/* nav mobile */
 .header__nav--burger {
     display: none;
     flex-direction: column;
@@ -90,14 +91,14 @@ ul {
     background: rgb(212, 214, 215);
     padding: 10px;
     border-radius: 5px;
-
+    gap:3vh;
 }
 
 /* Cacher la checkbox */
 .menu-toggle {
     display: none;
 }
-
+/* faire apparaitre la liste nav lorsque le burger est cliqué */
 .menu-toggle:checked+.menu-icon+.header__nav--burger {
     display: flex;
 }
@@ -131,6 +132,7 @@ ul {
     font-size: 16px;
 }
 
+/* Mise en page du Main */
 .main {
     display: flex;
     flex-direction: column;
@@ -161,11 +163,10 @@ ul {
         gap: 3vh;
     }
 }
-
+/* Block accueil */
 .main__accueil {
     text-align: center;
     align-items: center;
-
 }
 
 .main__accueil--contact {
@@ -183,7 +184,7 @@ ul {
     color: aliceblue;
     font-size: 16px;
 }
-
+/* Block contact */
 .main__contact {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -214,6 +215,7 @@ ul {
     height: 100%;
 }
 
+/* Footer */
 footer {
     display: grid;
     padding-block: 3vw;
@@ -221,7 +223,7 @@ footer {
     background: white;
 }
 
-.footer-top {
+.footer__top {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -229,9 +231,8 @@ footer {
 
     ul {
         display: grid;
-        align-items: center;
-        list-style: none;
-        padding: 0;
+        grid-template-rows: repeat(3, min-content); 
+        gap: 2vh;
     }
 
     a {
@@ -243,19 +244,19 @@ footer {
     }
 }
 
-.newsletter form {
+.footer__top--newsletter form {
     display: flex;
     gap: 10px;
     margin: 10px 0;
 }
 
-.newsletter input {
+.footer__top--newsletter input {
     padding: 8px;
     flex: 1;
     border: 1px solid black;
 }
 
-.newsletter button {
+.footer__top--newsletter button {
     padding: 8px 15px;
     background: white;
     color: black;
@@ -263,18 +264,22 @@ footer {
     cursor: pointer;
 }
 
-.infos {
+.footer__top--infos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5vw;
+    grid-template-columns: repeat(3, auto);
+    gap: 3vw;
     padding-right: 5vw;
+    height: 100%;
 
     div {
         display: grid;
+        grid-template-rows: min-content auto;
+        gap : 3vh;
     }
+    
 }
 
-.footer-bottom {
+.footer__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -282,14 +287,14 @@ footer {
     border-top: 1px solid black;
 }
 
-.legal a {
+.footer__bottom--legal a {
     margin-left: 15px;
     text-decoration: none;
     color: #333;
 }
 
 
-
+/* Media query mobile first */
 @media (min-width: 768px) {
     .header__nav {
         display: flex;
@@ -334,7 +339,7 @@ footer {
         width: 100%;
     }
 
-    .newsletter {
+    .footer__top--newsletter {
         padding-right: 20vw;
     }
 
@@ -343,7 +348,7 @@ footer {
 
 @media (max-width: 768px) {
 
-    .footer-top {
+    .footer__top {
         display: flex;
         flex-direction: column;
         margin-top: 3vh;
@@ -355,33 +360,33 @@ footer {
         gap: 2vh;
     }
 
-    .footer-form {
+    .footer__form {
         display: flex;
         flex-direction: column;
     }
 
-    .infos {
+    .footer__top--infos {
         display: flex;
         flex-direction: column;
         gap: 5vh;
     }
 
-    .infos div {
+    .footer__top--infos div {
         gap: 2vh;
     }
 
-    .footer-bottom {
+    .footer__bottom {
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 6vh;
     }
 
-    .copyright {
+    .footer__bottom--copyright {
         order: 2;
     }
 
-    .legal {
+    .footer__bottom--legal {
         display: flex;
         flex-direction: column;
         padding-top: 2vh;
